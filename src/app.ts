@@ -1,5 +1,6 @@
 import express, { Application } from "express";
 import { SpecalityRoutes } from "./module/specality/specality.routes";
+import { AuthRoutes } from "./module/auth/auth.routes";
 
 
 const app: Application = express();
@@ -10,5 +11,6 @@ app.get("/", (req, res) => {
 })
 
 app.use("/api/v1/specality", SpecalityRoutes)
+app.use("/api/v1/auth", AuthRoutes)
 
 export default app;
